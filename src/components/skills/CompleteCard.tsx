@@ -1,6 +1,7 @@
 import Card from "./Card"
 import CardTitle from "./CardTitle"
 import CardDescription from "./CardDescription"
+import ListOfItems from "../ListOfItems"
 
 interface props {
     title : string,
@@ -12,7 +13,8 @@ const CompleteCard = ( {title , description} : props) => {
         <div>
             <Card>
             <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+            <ListOfItems list={description.split(",")}></ListOfItems>
+            {/* <CardDescription>{description}</CardDescription> */}
           </Card>
         </div>
     )

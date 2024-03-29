@@ -36,21 +36,23 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className=" text-base sm:text-lg mb-6 lg:text-xl text-[#ADB7BE] dark:text-textColor">
             I am a full-stack developer with a passion for creating beautiful and functional user
           </p>
           <div>
             <Link
               href="/contact"
-              className="border-2 border-yellow-50 px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white"
+              className="border-2 border-yellow-50 px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white dark:bg-slate-800"
             >
-              Hire Me
+              <span className="bg-[#121212] hover:bg-slate-800 dark:bg-slate-800 rounded-full px-5 py-2">
+              Hire Me</span>
             </Link>
             <Link
               href="/"
-              className="px-1 inline-block py-1 border-2 border-yellow-50  w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+              className="px-1 inline-block py-1 border-2 border-yellow-50  w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3
+              dark:bg-slate-800"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-[#121212] hover:bg-slate-800 dark:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
             </Link>

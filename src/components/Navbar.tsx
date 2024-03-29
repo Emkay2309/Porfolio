@@ -5,6 +5,8 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
+import { FiMoon } from "react-icons/fi";
+import ThemeSwitch from "./ThemeSwitch";
 
 const navLinks = [
   {
@@ -23,19 +25,21 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-
+ 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100 dark:bg-[#eeeaea] dark:text-slate-900">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-5xl  font-semibold"
         >
-            <Image 
-                className="rounded-full opacity-70  border "
-                src={"/emkay.jpg"}
-                width={70} height={70} alt="logo"
-            />
+          <Image
+            className="rounded-full opacity-70  border "
+            src={"/emkay.jpg"}
+            width={70}
+            height={70}
+            alt="logo"
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -54,7 +58,8 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu flex  md:flex   md:w-auto" id="navbar">
+          <ThemeSwitch />
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -70,5 +75,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
