@@ -1,7 +1,7 @@
 import Card from "./Card"
 import CardTitle from "./CardTitle"
 import CardDescription from "./CardDescription"
-import ListOfItems from "../listOfItems"
+import ListOfItems from "../ListOfItems"
 
 interface props {
     title : string,
