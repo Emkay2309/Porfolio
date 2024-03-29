@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["class"],
+
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -19,6 +19,8 @@ const config = {
     },
     extend: {
       colors: {
+        textColor: "#4d3737",
+        textMuted:"#493e3e",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,6 +77,7 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  darkMode: "class",
   
 } satisfies Config
 
